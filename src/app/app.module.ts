@@ -8,13 +8,17 @@ import {NewServiceService} from "./service/new-service.service";
 import { AuthorsComponent } from './components/authors/authors.component';
 import { TitleCasingComponent } from './components/title-casing/title-casing.component';
 import {FormsModule} from "@angular/forms";
+import { ExamplePipe } from './pipe/example.pipe';
+import { FavouriteComponent } from './components/favourite/favourite.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewComponentComponent,
     AuthorsComponent,
-    TitleCasingComponent
+    TitleCasingComponent,
+    ExamplePipe,
+    FavouriteComponent
   ],
   imports: [
     BrowserModule,
