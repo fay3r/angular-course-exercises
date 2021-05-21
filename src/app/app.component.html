@@ -5,6 +5,14 @@
 
 <title-casing></title-casing>
 
-<favourite [isFavourite]="post.isFavourite" (change)="onFavouriteChanged()"></favourite>
+<favourite [isFavourite]="post.isFavourite"  (change)="onFavouriteChanged($event)"></favourite>
 
+<bootstrap-panel>
+  <ng-container class="hgee">aaa</ng-container>
+  <ng-container class="exa">ssss</ng-container>
+</bootstrap-panel>
+
+<like [isLiked]="tweet.isLiked" [likeCounter]="tweet.likesCount"></like>
 <router-outlet></router-outlet>
+
+

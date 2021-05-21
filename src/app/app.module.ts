@@ -10,6 +10,8 @@ import { TitleCasingComponent } from './components/title-casing/title-casing.com
 import {FormsModule} from "@angular/forms";
 import { ExamplePipe } from './pipe/example.pipe';
 import { FavouriteComponent } from './components/favourite/favourite.component';
+import { PanelComponentComponent } from './components/panel-component/panel-component.component';
+import { LikeComponent } from './components/like/like.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FavouriteComponent } from './components/favourite/favourite.component';
     AuthorsComponent,
     TitleCasingComponent,
     ExamplePipe,
-    FavouriteComponent
+    FavouriteComponent,
+    PanelComponentComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
