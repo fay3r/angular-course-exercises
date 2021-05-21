@@ -8,11 +8,21 @@
 <favourite [isFavourite]="post.isFavourite"  (change)="onFavouriteChanged($event)"></favourite>
 
 <bootstrap-panel>
-  <ng-container class="hgee">aaa</ng-container>
-  <ng-container class="exa">ssss</ng-container>
+  <ng-container class="exa">header</ng-container>
+  <ng-container class="hgee">body</ng-container>
 </bootstrap-panel>
 
 <like [isLiked]="tweet.isLiked" [likeCounter]="tweet.likesCount"></like>
+
+<div *ngIf="courses.length>0;then coursesList else noCourses">
+
+</div>
+<ng-template #coursesList>  List of courses</ng-template>
+<ng-template #noCourses>
+  no courses yet
+</ng-template>
+
+
 <router-outlet></router-outlet>
 
 
