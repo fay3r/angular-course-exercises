@@ -10,6 +10,8 @@ export class NewComponentComponent implements OnInit {
 
   title = "List of Courses"
   courses;
+  imageUrl = "https://lorempixel.com/400/200"
+  isActive = false;
 
   constructor(service: NewServiceService) {
     this.courses = service.getCourse();
@@ -18,4 +20,7 @@ export class NewComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSave() {
+    console.log("zapisuje");
+  }
 }

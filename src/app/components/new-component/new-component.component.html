@@ -1,7 +1,9 @@
-
 <h3>{{title}}</h3>
 <ul>
   <li *ngFor="let course of courses">
     {{course}}
   </li>
 </ul>
+
+<button class="btn btn-primary" [class.active]="isActive" (click)="onSave()"> save</button>
+<i class="far fa-star"></i>
