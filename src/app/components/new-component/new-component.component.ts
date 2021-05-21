@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NewServiceService} from '../../service/new-service.service'
 
 @Component({
-  selector: 'app-new-component',
+  selector: 'new-component',
   templateUrl: './new-component.component.html',
   styleUrls: ['./new-component.component.css']
 })
