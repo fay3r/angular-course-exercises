@@ -18,4 +18,8 @@ export class CourseFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit(course: any) {
+    console.log(course)
+
+  }
 }
