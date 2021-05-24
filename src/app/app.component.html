@@ -1,99 +1,102 @@
 <h1>Angular</h1>
-<new-component></new-component>
 
-<authors></authors>
+<post></post>
 
-<title-casing></title-casing>
+<!--<new-component></new-component>-->
 
-<favourite [isFavourite]="post.isFavourite" (change)="onFavouriteChanged($event)"></favourite>
+<!--<authors></authors>-->
 
-<bootstrap-panel>
-  <ng-container class="exa">header</ng-container>
-  <ng-container class="hgee">body</ng-container>
-</bootstrap-panel>
+<!--<title-casing></title-casing>-->
 
-<!--task-->
+<!--<favourite [isFavourite]="post.isFavourite" (change)="onFavouriteChanged($event)"></favourite>-->
 
-<like [isLiked]="tweet.isLiked" [likeCounter]="tweet.likesCount"></like>
+<!--<bootstrap-panel>-->
+<!--  <ng-container class="exa">header</ng-container>-->
+<!--  <ng-container class="hgee">body</ng-container>-->
+<!--</bootstrap-panel>-->
 
-<!--ngIf-->
+<!--&lt;!&ndash;task&ndash;&gt;-->
 
-<div *ngIf="courses.length>0;then coursesList else noCourses">
+<!--<like [isLiked]="tweet.isLiked" [likeCounter]="tweet.likesCount"></like>-->
 
-</div>
-<ng-template #coursesList> List of courses</ng-template>
-<ng-template #noCourses>
-  no courses yet
-</ng-template>
+<!--&lt;!&ndash;ngIf&ndash;&gt;-->
 
-<!--<div [hidden]="courses.length==0"> </div>-->
+<!--<div *ngIf="courses.length>0;then coursesList else noCourses">-->
 
-<!--ngSwitch-->
+<!--</div>-->
+<!--<ng-template #coursesList> List of courses</ng-template>-->
+<!--<ng-template #noCourses>-->
+<!--  no courses yet-->
+<!--</ng-template>-->
 
-<ul class="nav nav-pills">
-  <li class="nav-item" ><a class="nav-link" [class.active]="viewMode == 'map'" (click)="viewMode = 'map'" >Map View</a></li>
-  <li class="nav-item" ><a class="nav-link" [class.active]="viewMode == 'list'" (click)="viewMode = 'list'" >List View</a></li>
-</ul>
+<!--&lt;!&ndash;<div [hidden]="courses.length==0"> </div>&ndash;&gt;-->
 
-<div [ngSwitch]="viewMode">
-  <div *ngSwitchCase="'map'">Map View Content</div>
-  <div *ngSwitchCase="'list'">List View Content</div>
-  <div *ngSwitchDefault>Other</div>
-</div>
+<!--&lt;!&ndash;ngSwitch&ndash;&gt;-->
 
-<!--ngFor-->
-<br><br>
+<!--<ul class="nav nav-pills">-->
+<!--  <li class="nav-item" ><a class="nav-link" [class.active]="viewMode == 'map'" (click)="viewMode = 'map'" >Map View</a></li>-->
+<!--  <li class="nav-item" ><a class="nav-link" [class.active]="viewMode == 'list'" (click)="viewMode = 'list'" >List View</a></li>-->
+<!--</ul>-->
 
-<button class="btn" (click)="onAdd()">Add</button>
+<!--<div [ngSwitch]="viewMode">-->
+<!--  <div *ngSwitchCase="'map'">Map View Content</div>-->
+<!--  <div *ngSwitchCase="'list'">List View Content</div>-->
+<!--  <div *ngSwitchDefault>Other</div>-->
+<!--</div>-->
 
-<ul>
-  <li *ngFor="let course of courses; even as isEven">
-    {{course.name}} <span *ngIf="isEven">(EVEN)</span>
-    <button (click)="onRemove(course)">Remove</button>
-  </li>
-</ul>
+<!--&lt;!&ndash;ngFor&ndash;&gt;-->
+<!--<br><br>-->
 
+<!--<button class="btn" (click)="onAdd()">Add</button>-->
 
-<button class="btn" (click)="loadData()">Load</button>
-<ul>
-  <li *ngFor="let course of courses2;trackBy:trackCourse">
-    {{course.name}}
-  </li>
-</ul>
-
-<input type="text" [appInputFormat]="'uppercase'">
+<!--<ul>-->
+<!--  <li *ngFor="let course of courses; even as isEven">-->
+<!--    {{course.name}} <span *ngIf="isEven">(EVEN)</span>-->
+<!--    <button (click)="onRemove(course)">Remove</button>-->
+<!--  </li>-->
+<!--</ul>-->
 
 
-<!--task 5-->
-<br>
-<br>
+<!--<button class="btn" (click)="loadData()">Load</button>-->
+<!--<ul>-->
+<!--  <li *ngFor="let course of courses2;trackBy:trackCourse">-->
+<!--    {{course.name}}-->
+<!--  </li>-->
+<!--</ul>-->
 
-<zippy title="Shipping Details">
-  Shipping Details Content
-</zippy>
-<zippy title="Billing Details">
-  Billing Details Content
-</zippy>
+<!--<input type="text" [appInputFormat]="'uppercase'">-->
 
 
-<!--form lessons-->
+<!--&lt;!&ndash;task 5&ndash;&gt;-->
+<!--<br>-->
+<!--<br>-->
 
-<contact-form></contact-form>
+<!--<zippy title="Shipping Details">-->
+<!--  Shipping Details Content-->
+<!--</zippy>-->
+<!--<zippy title="Billing Details">-->
+<!--  Billing Details Content-->
+<!--</zippy>-->
 
 
-<!--coourse task-->
-<course-form></course-form>
+<!--&lt;!&ndash;form lessons&ndash;&gt;-->
 
-<!--reactive forms-->
-<signup-form></signup-form>
+<!--<contact-form></contact-form>-->
 
-<!--array form-->
 
-<new-course-form></new-course-form>
+<!--&lt;!&ndash;coourse task&ndash;&gt;-->
+<!--<course-form></course-form>-->
 
-<!--change password task-->
+<!--&lt;!&ndash;reactive forms&ndash;&gt;-->
+<!--<signup-form></signup-form>-->
 
-<change-password></change-password>
+<!--&lt;!&ndash;array form&ndash;&gt;-->
+
+<!--<new-course-form></new-course-form>-->
+
+<!--&lt;!&ndash;change password task&ndash;&gt;-->
+
+<!--<change-password></change-password>-->
 
 <router-outlet></router-outlet>
 
