@@ -20,8 +20,15 @@ import {SignupFormComponent} from "./components/signup-form/signup-form.componen
 import {NewCourseFormComponent} from './components/new-course-form/new-course-form.component';
 import {ChangePasswordComponent} from './components/change-password/change-password.component';
 import {PostComponent} from './components/post/post.component';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { HttpClientModule} from "@angular/common/http";
 import {PostService} from "./service/post.service";
+import { GithubFollowersComponent } from './components/github-followers/github-followers.component';
+import {GithubFollowersService} from "./service/github-followers.service";
+import {NavbarComponent} from "./components/navbar/navbar.component";
+import {HomeComponent} from "./components/home/home.component";
+import {GithubProfileComponent} from "./components/github-profile/github-profile.component";
+import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -40,17 +47,22 @@ import {PostService} from "./service/post.service";
     SignupFormComponent,
     NewCourseFormComponent,
     ChangePasswordComponent,
-    PostComponent
+    PostComponent,
+    GithubFollowersComponent,
+    NavbarComponent,
+    HomeComponent,
+    GithubProfileComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
 
   ],
-  providers: [NewServiceService, PostService],
+  providers: [NewServiceService, PostService, GithubFollowersService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
