@@ -29,6 +29,9 @@ import {HomeComponent} from "./components/home/home.component";
 import {GithubProfileComponent} from "./components/github-profile/github-profile.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
 import {RouterModule} from "@angular/router";
+import { DifferenttasksComponent } from './components/differenttasks/differenttasks.component';
+import { ArchiveHomeComponent } from './components/archive-home/archive-home.component';
+import { ArchiveDetailsComponent } from './components/archive-details/archive-details.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,9 @@ import {RouterModule} from "@angular/router";
     HomeComponent,
     GithubProfileComponent,
     NotFoundComponent,
+    DifferenttasksComponent,
+    ArchiveHomeComponent,
+    ArchiveDetailsComponent,
   ],
   imports: [
     BrowserModule,
