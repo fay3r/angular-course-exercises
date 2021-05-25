@@ -18,7 +18,6 @@ export class DataService {
   }
 
   create(resource:any){
-    return Observable.throw(NotFoundError);
     return this.http.post(this.url, JSON.stringify(resource));
   }
 
