@@ -20,18 +20,24 @@ import {SignupFormComponent} from "./components/signup-form/signup-form.componen
 import {NewCourseFormComponent} from './components/new-course-form/new-course-form.component';
 import {ChangePasswordComponent} from './components/change-password/change-password.component';
 import {PostComponent} from './components/post/post.component';
-import { HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {PostService} from "./service/post.service";
-import { GithubFollowersComponent } from './components/github-followers/github-followers.component';
+import {GithubFollowersComponent} from './components/github-followers/github-followers.component';
 import {GithubFollowersService} from "./service/github-followers.service";
 import {NavbarComponent} from "./components/navbar/navbar.component";
 import {HomeComponent} from "./components/home/home.component";
 import {GithubProfileComponent} from "./components/github-profile/github-profile.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
-import {RouterModule} from "@angular/router";
-import { DifferenttasksComponent } from './components/differenttasks/differenttasks.component';
-import { ArchiveHomeComponent } from './components/archive-home/archive-home.component';
-import { ArchiveDetailsComponent } from './components/archive-details/archive-details.component';
+import {DifferenttasksComponent} from './components/differenttasks/differenttasks.component';
+import {ArchiveHomeComponent} from './components/archive-home/archive-home.component';
+import {ArchiveDetailsComponent} from './components/archive-details/archive-details.component';
+import {AdminComponent} from './components/admin/admin.component';
+import {LoginComponent} from './components/login/login.component';
+import {NoAccessComponent} from './components/no-access/no-access.component';
+import {OrderService} from "./service/order.service";
+import {AuthService} from "./service/auth.service";
+import {FakeBackend} from "./components/helpers/fake-backend";
+import {SignupComponent} from "./components/signup/signup.component";
 
 @NgModule({
   declarations: [
@@ -59,6 +65,10 @@ import { ArchiveDetailsComponent } from './components/archive-details/archive-de
     DifferenttasksComponent,
     ArchiveHomeComponent,
     ArchiveDetailsComponent,
+    AdminComponent,
+    LoginComponent,
+    NoAccessComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +78,18 @@ import { ArchiveDetailsComponent } from './components/archive-details/archive-de
     HttpClientModule,
 
   ],
-  providers: [NewServiceService, PostService, GithubFollowersService],
+  providers: [
+    NewServiceService,
+    PostService,
+    GithubFollowersService,
+    OrderService,
+    AuthService,
+       {
+      provide: HTTP_INTERCEPTORS,
+      useClass: FakeBackend,
+      multi: true
+    }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

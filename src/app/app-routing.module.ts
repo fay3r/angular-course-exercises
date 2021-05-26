@@ -8,6 +8,9 @@ import {NotFoundComponent} from "./components/not-found/not-found.component";
 import {DifferenttasksComponent} from "./components/differenttasks/differenttasks.component";
 import {ArchiveDetailsComponent} from "./components/archive-details/archive-details.component";
 import {ArchiveHomeComponent} from "./components/archive-home/archive-home.component";
+import {LoginComponent} from "./components/login/login.component";
+import {AdminComponent} from "./components/admin/admin.component";
+import {NoAccessComponent} from "./components/no-access/no-access.component";
 
 const routes: Routes = [
   {
@@ -38,6 +41,18 @@ const routes: Routes = [
     path: 'archive',
     component: ArchiveHomeComponent
   },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
+  },  {
+    path: 'no-access',
+    component: NoAccessComponent
+  },
+
 
   {
     path: '**',
