@@ -16,13 +16,13 @@ export class LoginComponent {
     private authService: AuthService) { }
 
   signIn(credentials:any) {
-    console.log(credentials)
     this.authService.login(credentials)
       .subscribe(result => {
         if (result)
           this.router.navigate(['/']);
         else
           this.invalidLogin = true;
-      });
+      }
+      );
   }
 }
