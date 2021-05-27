@@ -36,12 +36,14 @@ export class AuthService {
     return !jwtHelper.isTokenExpired(token);
   }
 
-  getCurrentUser(){
+  get currentUser(){
     let token = localStorage.getItem('token');
     if(!token) {
+      console.log('nie ma');
       return null;
     }
-    return new JwtHelperService().decodeToken(token);
+
+    return new JwtHelperService().decodeToken(token)
 
   }
 }

@@ -68,7 +68,7 @@ import {SignupComponent} from "./components/signup/signup.component";
     AdminComponent,
     LoginComponent,
     NoAccessComponent,
-    SignupComponent
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
