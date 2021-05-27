@@ -15,7 +15,7 @@ import {delay, mergeMap, materialize, dematerialize} from 'rxjs/operators';
 export class FakeBackend implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const {url, method, headers, body} = request;
-    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZheWVyQGRvbWFpbi5jb20iLCJwYXNzd29yZCI6IjEyMzQifQ.b0HpspEx1jPKk84aiUuCDRUM7zdPlxC7P9fTTt73rRQ';
+    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOiJ0cnVlIn0.1zlAeGts8dU1rtt-EB0VcbVwhGA_-UkZIzQQY2u96qs';
     // wrap in delayed observable to simulate server api call
     return of(null)
       .pipe(mergeMap(handleRoute))

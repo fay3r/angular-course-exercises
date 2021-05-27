@@ -7,5 +7,6 @@ import {FavouriteChangedEventArgs} from "./components/favourite/favourite.compon
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title ='courseEx';
 
 }
