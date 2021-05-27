@@ -13,7 +13,7 @@ export class AdminAuthGuard implements CanActivate{
   canActivate(){
     let user = this.authService.currentUser;
     console.log('can activate ',user , user.type)
-    if(user && user.type == true){
+    if(user && this.authService.isAdmin()){
       console.log('poprawne')
       return true;
     }

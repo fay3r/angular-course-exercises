@@ -15,8 +15,8 @@ import {delay, mergeMap, materialize, dematerialize} from 'rxjs/operators';
 export class FakeBackend implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const {url, method, headers, body} = request;
-    // let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImFhYWEiLCJ0eXBlIjoidHJ1ZSJ9.Cve5oGOxdmffxtW06m8aArg6K_ABcfMoM_ltfTnav6o'; // tak
-    let token ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImFhYWEiLCJ0eXBlIjoiZmFsc2UifQ.R6-rfCR1jnb0fKzWbikDf4KIpwfFSTCjByw_gOZIhzk';  // nie
+    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImFhYWEiLCJ0eXBlIjoidHJ1ZSJ9.Cve5oGOxdmffxtW06m8aArg6K_ABcfMoM_ltfTnav6o'; // tak
+    //let token ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImFhYWEiLCJ0eXBlIjoiZmFsc2UifQ.R6-rfCR1jnb0fKzWbikDf4KIpwfFSTCjByw_gOZIhzk';  // nie
     // wrap in delayed observable to simulate server api call
     return of(null)
       .pipe(mergeMap(handleRoute))
