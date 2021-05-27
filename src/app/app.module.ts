@@ -38,6 +38,10 @@ import {OrderService} from "./service/order.service";
 import {AuthService} from "./service/auth.service";
 import {FakeBackend} from "./components/helpers/fake-backend";
 import {SignupComponent} from "./components/signup/signup.component";
+import { MainPageComponent } from './components/animations/main-page/main-page.component';
+import {TodosComponent} from "./components/animations/todos/todos.component";
+import {ZipppyComponent} from "./components/animations/zippy/zipppy.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -69,6 +73,9 @@ import {SignupComponent} from "./components/signup/signup.component";
     LoginComponent,
     NoAccessComponent,
     SignupComponent,
+    MainPageComponent,
+    TodosComponent,
+    ZipppyComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +83,7 @@ import {SignupComponent} from "./components/signup/signup.component";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule
 
   ],
   providers: [

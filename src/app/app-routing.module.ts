@@ -13,6 +13,7 @@ import {AdminComponent} from "./components/admin/admin.component";
 import {NoAccessComponent} from "./components/no-access/no-access.component";
 import {AuthGuard} from "./service/auth-guard";
 import {AdminAuthGuard} from "./service/admin-auth-guard";
+import {MainPageComponent} from "./components/animations/main-page/main-page.component";
 
 const routes: Routes = [
   {
@@ -54,8 +55,10 @@ const routes: Routes = [
   },  {
     path: 'no-access',
     component: NoAccessComponent
+  }, {
+    path: 'animations',
+    component: MainPageComponent
   },
-
 
   {
     path: '**',
